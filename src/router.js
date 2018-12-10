@@ -26,7 +26,7 @@ export const Tabs = createBottomTabNavigator({
     screen: ListItem,
     navigationOptions:{
       tabBarLabel: 'List Item',
-      tabBarIcon: ({ tintColor }) => <Icon name="bars" type="font-awesome" size={28} color={tintColor} />
+      tabBarIcon: ({ tintColor }) => <Icon name="plus" type="font-awesome" size={28} color={tintColor} />
     }
   }
 });
