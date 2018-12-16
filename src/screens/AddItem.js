@@ -4,8 +4,10 @@ import {
   Text,
   StyleSheet,
   TextInput,
-  TouchableHighlight
+  TouchableHighlight,
+  AlertIOS
 } from 'react-native';
+import { addItem } from '../config/ItemService';
 
 export default class AddItem extends Component {
   constructor(props) {
@@ -23,7 +25,10 @@ export default class AddItem extends Component {
       });
     }
     handleSubmit() {
-      console.log(this.state.name)
+      addItem(this.state.name);
+      AlertIOS.alert(
+        'Item saved successfully'
+      );
     }
   render() {
     return (
